@@ -4,6 +4,6 @@ RUN apt update
 
 RUN apt install nginx -y
 
-COPY . /var/www/html/
+COPY . /home/ubuntu
 
 EXPOSE 80
