@@ -6,4 +6,4 @@ RUN apt install nginx -y
 
 COPY . /var/www/html/
 
-EXPOSE 99
+EXPOSE 80
