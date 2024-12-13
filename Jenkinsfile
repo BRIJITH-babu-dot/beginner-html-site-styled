@@ -4,7 +4,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
-                    docker.build('-------<dockerhub-username>------/website')
+                    docker.build('brijithdocker/website')
                 }
             }
         }
@@ -12,7 +12,7 @@ pipeline {
             steps {
                 script {
                     docker.withRegistry('https://index.docker.io/v1/', 'dockerhub-credentials') {
-                        docker.image('-----<dockerhub-username>-----/website').push('latest')
+                        docker.image('brijithdocker/website').push('latest')
                     }
                 }
             }
